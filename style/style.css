@@ -6,7 +6,7 @@
 /* theme */
 html {
     --colorThemeDeg: 209;
-    --webSiteTitle: 'myNotes';
+    --webSiteTitle: 'notesPage';
 }
 * {
     --colorLight: white;
@@ -41,8 +41,9 @@ html {
 html, body {
     margin: 0px;
     padding: 0px;
-    background: repeating-linear-gradient(to top right, var(--colorBody) 0%, var(--colorLight) 10%);
+    background: repeating-linear-gradient(-135deg, var(--colorBody) 0px, var(--colorLight) 10vw);
     background-color: var(--colorBody);
+    min-height: 100vh;
 }
 body {
     padding: 5vw;
