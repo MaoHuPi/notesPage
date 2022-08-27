@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 2022 © MaoHuPi -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mdViewer</title>
+    <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
+    <script src="script/showdown/showdown.min.js"></script>
+    <link rel="stylesheet" href="style/showdown/prism-tomorrow.css">
+    <script src="script/showdown/prism-core.min.js"></script>
+    <link rel="stylesheet" href="style/md.css">
+    <script src="script/basic.js"></script>
+    <script src="script/fileJS.js"></script>
+    <base href="file/" target="_blank" rel="noreferrer noopener"><!-- 讓Xmlhttp抓檔案時直接從file資料夾找 -->
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            padding: 5vw;
+        }
+    </style>
+</head>
+<body class="post-body">
+    <script>
+        var showdownOption = {
+            'simplifiedAutoLink': true,
+            'strikethrough': true,
+            'tables': true,
+            'tasklists': true
+        };
+        let converter = new showdown.Converter(showdownOption);
+        if(notEmpty($_GET, 'file')){
+            document.title = fileJS.getName($_GET['file']);
+            sendXmlhttp($_GET['file'], '', md => {
+                $('base').setAttribute('href', `file/${fileJS.removeName($_GET['file'])}`); // 將md檔案內的連結與圖像之路徑出發點設為檔案所在資料夾 
+                md = md.replace(/\n&amp;gt;/g, '\n>')
+                    .split('&lt;').join('<')
+                    .split('&gt;').join('>');
+                $('body').innerHTML = converter.makeHtml(md)
+                    .replace(/&amp;amp;/g, "&amp;");
+            }, 'get');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+    "note": "2022 © MaoHuPi", 
+    "title": "首頁", 
+    "links": [
+        {
+            "title": "國文筆記", 
+            "background": "https://bnextmedia.s3.hicloud.net.tw/image/album/2021-10/img-1634548729-21305@900.jpg", 
+            "page": "chNote"
+        }, 
+        {
+            "title": "英語筆記", 
+            "background": "https://cc-image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fi.cheers.com.tw%2Farticle%2F201912%2Farticle-5de60ba841e03.jpg/?w=561&h=376&fit=fill", 
+            "page": "enNote"
+        }, 
+        {
+            "title": "數學筆記", 
+            "background": "https://truth.bahamut.com.tw/s01/201711/1264bad8430c679ef5c7ffd685244218.JPG", 
+            "page": "maNote"
+        }, 
+        {
+            "title": "歷史筆記", 
+            "background": "https://doqvf81n9htmm.cloudfront.net/data/maggieyu_81/180123/0123034.jpg", 
+            "page": "hiNote"
+        }, 
+        {
+            "title": "地理筆記", 
+            "background": "https://doqvf81n9htmm.cloudfront.net/data/maggieyu_81/180123/0123034.jpg", 
+            "page": "geNote"
+        }, 
+        {
+            "title": "公民筆記", 
+            "background": "https://doqvf81n9htmm.cloudfront.net/data/maggieyu_81/180123/0123034.jpg", 
+            "page": "ciNote"
+        }, 
+        {
+            "title": "生物筆記", 
+            "background": "https://cw1.tw/CW/images/article/C1462877556955.jpg", 
+            "page": "blNote"
+        }, 
+        {
+            "title": "物理筆記", 
+            "background": "https://cw1.tw/CW/images/article/C1462877556955.jpg", 
+            "page": "phNote"
+        }, 
+        {
+            "title": "化學筆記", 
+            "background": "https://cw1.tw/CW/images/article/C1462877556955.jpg", 
+            "page": "cheNote"
+        }
+    ]
+}
